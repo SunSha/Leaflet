@@ -14,7 +14,7 @@ L.Evented = L.Class.extend({
 				this._on(type, types[type], fn);
 			}
 
-		} else {
+		} else if( typeof types !== "undefined") {
 			// types can be a string of space-separated words
 			types = L.Util.splitWords(types);
 
